@@ -1,0 +1,14 @@
+# 업로드한 캡처·분석 결과 (개인 트래픽이 들어 있을 수 있음)
+backend/uploads/
+backend/packet_convert/
+backend/models/
+# 평가용 공개 데이터셋 / 캐시 (수 GB, eval/download_ctu13.sh 로 다시 받음)
+eval/data/
+eval/cache/
+.venv/
+__pycache__/
+*.pcap
+*.pcapng
+node_modules/
+dist/
+.DS_Store

@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "train": "s48",
+    "n_train": 160932,
+    "target_fpr": 0.01,
+    "threshold": 0.630411721969469,
+    "generated": "2026-11-06 18:50"
+  },
+  "results": [
+    {
+      "info": {
+        "scenario": "s46",
+        "botnet": "Virut",
+        "behavior": "IRC C2, 스팸(SMTP), HTTP",
+        "flows": 179495,
+        "analyzed": 179172,
+        "excluded_noise": 323,
+        "label_counts": {
+          "Background": 170844,
+          "Normal": 6284,
+          "Botnet": 1861,
+          "Unmatched": 183
+        },
+        "infected_hosts": [
+          "147.32.84.165"
+        ],
+        "seconds": {
+          "per_capture": 5.0,
+          "baseline": 2.3
+        }
+      },
+      "rows": [
+        {
+          "config": "A. 캡처별 IF (상위 2%)",
+          "alerts": 187,
+          "tp": 85,
+          "fp": 102,
+          "fn": 1776,
+          "precision": 0.45454545454545453,
+          "recall": 0.04567436861902203,
+          "f1": 0.08300781249999999,
+          "fpr": 0.016231699554423933,
+          "alerts_total": 3584,
+          "alerts_background": 3395,
+          "host_rank": {
+            "147.32.84.165": 6
+          },
+          "alerting_hosts": 1080
+        },
+        {
+          "config": "B. 기준선 IF (목표 FPR 1%)",
+          "alerts": 68,
+          "tp": 7,
+          "fp": 61,
+          "fn": 1854,
+          "precision": 0.10294117647058823,
+          "recall": 0.0037614185921547557,
+          "f1": 0.007257646448937274,
+          "fpr": 0.00970719287078294,
+          "alerts_total": 1537,
+          "alerts_background": 1469,
+          "host_rank": {
+            "147.32.84.165": 29
+          },
+          "alerting_hosts": 585
+        },
+        {
+          "config": "C. 규칙만 (위험 2점 이상)",
+          "alerts": 1053,
+          "tp": 996,
+          "fp": 57,
+          "fn": 865,
+          "precision": 0.9458689458689459,
+          "recall": 0.5351961311123052,
+          "f1": 0.6835964310226492,
+          "fpr": 0.009070655633354551,
+          "alerts_total": 31922,
+          "alerts_background": 30859,
+          "host_rank": {
+            "147.32.84.165": 2
+          },
+          "alerting_hosts": 65
+        },
+        {
+          "config": "D. 하이브리드 (B 이상 AND 위험 2점 이상)",
+          "alerts": 5,
+          "tp": 5,
+          "fp": 0,
+          "fn": 1856,
+          "precision": 1.0,
+          "recall": 0.0026867275658248252,
+          "f1": 0.005359056806002143,
+          "fpr": 0.0,
+          "alerts_total": 215,
+          "alerts_background": 210,
+          "host_rank": {
+            "147.32.84.165": 3
+          },
+          "alerting_hosts": 9
+        },
+        {
+          "config": "E. 하이브리드 (B 이상 OR 위험 4점 이상)",
+          "alerts": 68,
+          "tp": 7,
+          "fp": 61,
+          "fn": 1854,
+          "precision": 0.10294117647058823,
+          "recall": 0.0037614185921547557,
+          "f1": 0.007257646448937274,
+          "fpr": 0.00970719287078294,
+          "alerts_total": 1677,
+          "alerts_background": 1609,
+          "host_rank": {
+            "147.32.84.165": 29
+          },
+          "alerting_hosts": 585
+        }
+      ],
+      "by_behavior": {
+        "TCP-Attempt": {
+          "flows": 1004,
+          "A": 0.03286852589641434,
+          "B": 0.0,
+          "C": 0.9611553784860558,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Not-Encrypted-SMTP-Private-Proxy": {
+          "flows": 363,
+          "A": 0.12947658402203857,
+          "B": 0.01652892561983471,
+          "C": 0.01652892561983471,
+          "D": 0.013774104683195593,
+          "E": 0.01652892561983471
+        },
+        "TCP-Established-HTTP-To-Microsoft": {
+          "flows": 98,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-SSL-To-Microsoft": {
+          "flows": 86,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-HTTP-To-Microsoft-Live": {
+          "flows": 40,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-SPAM": {
+          "flows": 37,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-Custom-Encryption": {
+          "flows": 36,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-HTTP-Google-Net-Established": {
+          "flows": 35,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-HTTP-Ad": {
+          "flows": 28,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-CC12-HTTP-Not-Encrypted": {
+          "flows": 22,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-WEB-Established": {
+          "flows": 21,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-WEB-Established-SSL": {
+          "flows": 19,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Attempt-SPAM": {
+          "flows": 19,
+          "A": 0.21052631578947367,
+          "B": 0.0,
+          "C": 1.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-CC5-Plain-HTTP-Encrypted-Data": {
+          "flows": 14,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established-HTTP-Binary-Download": {
+          "flows": 12,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "UDP-DNS": {
+          "flows": 11,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-CC1-HTTP-Not-Encrypted": {
+          "flows": 10,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.5,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "UDP-Attempt-DNS": {
+          "flows": 3,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established": {
+          "flows": 2,
+          "A": 0.5,
+          "B": 0.5,
+          "C": 0.5,
+          "D": 0.0,
+          "E": 0.5
+        },
+        "TCP-CC7-Custom-Encryption": {
+          "flows": 1,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        }
+      }
+    },
+    {
+      "info": {
+        "scenario": "s52",
+        "botnet": "Rbot (3대)",
+        "behavior": "IRC C2, ICMP DDoS",
+        "flows": 126497,
+        "analyzed": 126277,
+        "excluded_noise": 220,
+        "label_counts": {
+          "Background": 125229,
+          "Normal": 850,
+          "Unmatched": 176,
+          "Botnet": 22
+        },
+        "infected_hosts": [
+          "147.32.84.165",
+          "147.32.84.191",
+          "147.32.84.192"
+        ],
+        "seconds": {
+          "per_capture": 3.6,
+          "baseline": 1.7
+        }
+      },
+      "rows": [
+        {
+          "config": "A. 캡처별 IF (상위 2%)",
+          "alerts": 14,
+          "tp": 2,
+          "fp": 12,
+          "fn": 20,
+          "precision": 0.14285714285714285,
+          "recall": 0.09090909090909091,
+          "f1": 0.1111111111111111,
+          "fpr": 0.01411764705882353,
+          "alerts_total": 2526,
+          "alerts_background": 2507,
+          "host_rank": {
+            "147.32.84.165": 246,
+            "147.32.84.191": 627,
+            "147.32.84.192": null
+          },
+          "alerting_hosts": 863
+        },
+        {
+          "config": "B. 기준선 IF (목표 FPR 1%)",
+          "alerts": 6,
+          "tp": 1,
+          "fp": 5,
+          "fn": 21,
+          "precision": 0.16666666666666666,
+          "recall": 0.045454545454545456,
+          "f1": 0.07142857142857144,
+          "fpr": 0.0058823529411764705,
+          "alerts_total": 1161,
+          "alerts_background": 1154,
+          "host_rank": {
+            "147.32.84.165": 153,
+            "147.32.84.191": null,
+            "147.32.84.192": null
+          },
+          "alerting_hosts": 475
+        },
+        {
+          "config": "C. 규칙만 (위험 2점 이상)",
+          "alerts": 20,
+          "tp": 5,
+          "fp": 15,
+          "fn": 17,
+          "precision": 0.25,
+          "recall": 0.22727272727272727,
+          "f1": 0.23809523809523808,
+          "fpr": 0.01764705882352941,
+          "alerts_total": 17848,
+          "alerts_background": 17809,
+          "host_rank": {
+            "147.32.84.165": 13,
+            "147.32.84.191": 14,
+            "147.32.84.192": 36
+          },
+          "alerting_hosts": 86
+        },
+        {
+          "config": "D. 하이브리드 (B 이상 AND 위험 2점 이상)",
+          "alerts": 1,
+          "tp": 1,
+          "fp": 0,
+          "fn": 21,
+          "precision": 1.0,
+          "recall": 0.045454545454545456,
+          "f1": 0.08695652173913045,
+          "fpr": 0.0,
+          "alerts_total": 308,
+          "alerts_background": 306,
+          "host_rank": {
+            "147.32.84.165": 3,
+            "147.32.84.191": null,
+            "147.32.84.192": null
+          },
+          "alerting_hosts": 8
+        },
+        {
+          "config": "E. 하이브리드 (B 이상 OR 위험 4점 이상)",
+          "alerts": 6,
+          "tp": 1,
+          "fp": 5,
+          "fn": 21,
+          "precision": 0.16666666666666666,
+          "recall": 0.045454545454545456,
+          "f1": 0.07142857142857144,
+          "fpr": 0.0058823529411764705,
+          "alerts_total": 1297,
+          "alerts_background": 1290,
+          "host_rank": {
+            "147.32.84.165": 153,
+            "147.32.84.191": null,
+            "147.32.84.192": null
+          },
+          "alerting_hosts": 475
+        }
+      ],
+      "by_behavior": {
+        "TCP-CC106-IRC-Not-Encrypted": {
+          "flows": 6,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.3333333333333333,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "UDP-DNS": {
+          "flows": 5,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "UDP-Attempt": {
+          "flows": 3,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-Established": {
+          "flows": 3,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.3333333333333333,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "TCP-HTTP-Google-Net-Established": {
+          "flows": 3,
+          "A": 0.0,
+          "B": 0.0,
+          "C": 0.0,
+          "D": 0.0,
+          "E": 0.0
+        },
+        "ICMP": {
+          "flows": 2,
+          "A": 1.0,
+          "B": 0.5,
+          "C": 1.0,
+          "D": 0.5,
+          "E": 0.5
+        }
+      }
+    }
+  ]
+}
